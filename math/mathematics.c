@@ -2,24 +2,41 @@
 #include <stdio.h>
 
 /*
-    Im going to try to make this only using adition and subtraction
+    Im going to try to make this only using adition
 */
 
+//Addition
 double add(double a, double b){
     return a + b;
 }
 
+//Subtraction implemented using addition
 double subtract(double a, double b){
-    return a - b;
+    return a + (-b);
 }
 
+
+//Divion which I dont know how to implement using addition
 double divide(double a, double b){
-    double result;
+    /*
+        Couldn't find a way to implement division using addition or subtraction
+
+        PULL REQUEST IF YOU HAVE AN IDEA
+    */
+    return a / b;
 }
 
+//Multiplication implemented by addition
 double multiply(double a, double b){
-    double result;
+    double result = 0;
+
+    for(int i = 1; i <= b; i++){
+        result += a;
+    }
+
+    return result;
 }
+
 
 
 double power(double a, double b){
@@ -33,6 +50,8 @@ double power(double a, double b){
 }
 
 
+
+//Gets the square root of a number
 double square_root(double a){
     double sqrt, temp;
 
@@ -50,8 +69,15 @@ double square_root(double a){
 
 }
 
-double factorial(double a){
 
+//Recursive function
+double factorial(double a){
+    
+    if(a == 0){
+        return 1;
+    }
+
+    return a * factorial(a - 1);
 }
 
 
@@ -79,5 +105,12 @@ void decToBin(int decimal){
 
 
 void binToDec(int bin){
-
+    int dec = 0, i = 0, rem;
+    while (bin != 0) {
+        rem = bin % 10;
+        bin /= 10;
+        dec += rem * power(2, i);
+        ++i;
+    }
+    printf("%d\n", dec);
 }
