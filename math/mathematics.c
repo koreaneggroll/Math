@@ -146,6 +146,7 @@ void insert_Numbers(int c, int a, int b){
     printf("\t   %d\n", b);
 }
 
+
 void getOut_numbers(int a, int b){
     int result, c, r;
     r = Remainder(a, b);
