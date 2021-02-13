@@ -5,15 +5,20 @@
     Im going to try to make this only using adition
 */
 
+
+
 //Addition
 double add(double a, double b){
     return a + b;
 }
 
+
+
 //Subtraction implemented using addition
 double subtract(double a, double b){
     return a + (-b);
 }
+
 
 
 //Divion which I dont know how to implement using addition
@@ -25,6 +30,15 @@ double divide(double a, double b){
     */
     return a / b;
 }
+
+//Returns the remainder of a division
+int Remainder(int a, int b){
+    int result;
+    result = a-(a/b*b);
+
+    return result;
+}
+
 
 //Multiplication implemented by addition
 double multiply(double a, double b){
@@ -70,6 +84,7 @@ double square_root(double a){
 }
 
 
+
 //Recursive function
 double factorial(double a){
     
@@ -81,6 +96,8 @@ double factorial(double a){
 }
 
 
+
+//Converts from decimal to binary
 void decToBin(int decimal){
     int bin[32];
     int rest, divide;
@@ -104,6 +121,8 @@ void decToBin(int decimal){
 }
 
 
+
+//Converts from binary to decimal
 void binToDec(int bin){
     int dec = 0, i = 0, rem;
     while (bin != 0) {
@@ -113,4 +132,24 @@ void binToDec(int bin){
         ++i;
     }
     printf("%d\n", dec);
+}
+
+
+void insert_Numbers(int c, int a, int b){
+    int result;
+
+    result = c * b + a;
+
+    printf("%d %d/%d => ", c, a, b);
+    printf("%d*%d+%d => %d/%d\n", c, b, a, result, b );
+    printf("\t -----\n");
+    printf("\t   %d\n", b);
+}
+
+void getOut_numbers(int a, int b){
+    int result, c, r;
+    r = Remainder(a, b);
+    c = divide(a, b);
+    
+    printf("%d/%d => %d %d/%d", a, b, c, r, b);
 }

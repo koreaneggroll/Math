@@ -11,5 +11,8 @@ double square_root(double a);
 double factorial(double a);
 void decToBin(int decimal);
 void binToDec(int bin);
+void insert_wholeNumbers(int c, int a, int b);
+void getOut_numbers(int a, int b);
+int Remainder(int a, int b);
 
 #endif //MATHEMATICS_H
