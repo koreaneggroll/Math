@@ -180,3 +180,20 @@ void divide_fractions(int a, int b, int c, int d){
 
     printf("%d/%d : %d/%d => %d/%d : %d/%d = %d/%d", a, b, c, d, a, b, d, c, result_top, result_bottom);
 }
+
+
+
+void multiply_fractions_sameBase(int a, int b, int exp1, int exp2){
+    int result_exponent;
+
+    result_exponent = add(exp1, exp2);
+
+    printf("(%d/%d)^%d * (%d/%d)^%d => (%d/%d)^%d+%d = (%d/%d)^%d", a, b, exp1, a, b, exp2, a, b, exp1, exp2, a, b, result_exponent);
+
+}
+
+
+
+void divide_fractions_sameBase(int a, int b, int exp1, int exp2){
+    
+}

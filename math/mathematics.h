@@ -16,5 +16,7 @@ void getOut_numbers(int a, int b);
 int Remainder(int a, int b);
 void multiply_fractions(int a, int b, int c, int d);
 void divide_fractions(int a, int b, int c, int d);
+void multiply_fractions_sameBase(int a, int b, int exp1, int exp2);
+void divide_fractions_sameBase(int a, int b, int exp1, int exp2);
 
 #endif //MATHEMATICS_H
