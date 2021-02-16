@@ -14,6 +14,7 @@ void binToDec(int bin);
 void insert_wholeNumbers(int c, int a, int b);
 void getOut_numbers(int a, int b);
 int Remainder(int a, int b);
-int multiply_fractions(int a, int b, int c, int d);
+void multiply_fractions(int a, int b, int c, int d);
+void divide_fractions(int a, int b, int c, int d);
 
 #endif //MATHEMATICS_H

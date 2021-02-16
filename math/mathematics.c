@@ -158,12 +158,25 @@ void getOut_numbers(int a, int b){
 }
 
 
+
 void multiply_fractions(int a, int b, int c, int d){
     int result_top;
     int result_bottom;
 
-    result_top = a * c;
-    result_bottom = b * d;
+    result_top = multiply(a, c);
+    result_bottom = multiply(b, d);
 
     printf("%d/%d * %d/%d => %d*%d/%d*%d = %d/%d", a, b, c, d, a, c, b, d, result_top, result_bottom);
+}
+
+
+
+void divide_fractions(int a, int b, int c, int d){
+    int result_top;
+    int result_bottom;
+
+    result_top = multiply(a, d);
+    result_bottom = multiply(b, c);
+
+    printf("%d/%d : %d/%d => %d/%d : %d/%d = %d/%d", a, b, c, d, a, b, d, c, result_top, result_bottom);
 }
