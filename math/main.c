@@ -2,5 +2,5 @@
 #include "mathematics.h"
 
 int main(void){
-    getOut_numbers(8, 3);
+    multiply_fractions(20, 20, 20, 20);
 }

@@ -135,6 +135,7 @@ void binToDec(int bin){
 }
 
 
+
 void insert_Numbers(int c, int a, int b){
     int result;
 
@@ -147,10 +148,22 @@ void insert_Numbers(int c, int a, int b){
 }
 
 
+
 void getOut_numbers(int a, int b){
     int result, c, r;
     r = Remainder(a, b);
     c = divide(a, b);
     
     printf("%d/%d => %d %d/%d", a, b, c, r, b);
+}
+
+
+void multiply_fractions(int a, int b, int c, int d){
+    int result_top;
+    int result_bottom;
+
+    result_top = a * c;
+    result_bottom = b * d;
+
+    printf("%d/%d * %d/%d => %d*%d/%d*%d = %d/%d", a, b, c, d, a, c, b, d, result_top, result_bottom);
 }
