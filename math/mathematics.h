@@ -18,5 +18,8 @@ void multiply_fractions(int a, int b, int c, int d);
 void divide_fractions(int a, int b, int c, int d);
 void multiply_fractions_sameBase(int a, int b, int exp1, int exp2);
 void divide_fractions_sameBase(int a, int b, int exp1, int exp2);
+void power_of_power(int a, int b, int m, int n);
+void fraction_from_num(int a, int b, int n);
+float percentage(int p, int n);
 
 #endif //MATHEMATICS_H

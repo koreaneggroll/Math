@@ -31,6 +31,8 @@ double divide(double a, double b){
     return a / b;
 }
 
+
+
 //Returns the remainder of a division
 int Remainder(int a, int b){
     int result;
@@ -38,6 +40,7 @@ int Remainder(int a, int b){
 
     return result;
 }
+
 
 
 //Multiplication implemented by addition
@@ -55,7 +58,7 @@ double multiply(double a, double b){
 
 double power(double a, double b){
     double result = 1;
-    
+
     for(b; b > 0; b--){
         result = result * a;
     }
@@ -87,7 +90,7 @@ double square_root(double a){
 
 //Recursive function
 double factorial(double a){
-    
+
     if(a == 0){
         return 1;
     }
@@ -116,8 +119,8 @@ void decToBin(int decimal){
     for (int j = i - 1; j >= 0; j--){
             printf("%d", bin[j]);
         }
-    
-    printf("\n"); 
+
+    printf("\n");
 }
 
 
@@ -153,7 +156,7 @@ void getOut_numbers(int a, int b){
     int result, c, r;
     r = Remainder(a, b);
     c = divide(a, b);
-    
+
     printf("%d/%d => %d %d/%d", a, b, c, r, b);
 }
 
@@ -195,5 +198,38 @@ void multiply_fractions_sameBase(int a, int b, int exp1, int exp2){
 
 
 void divide_fractions_sameBase(int a, int b, int exp1, int exp2){
-    
+  int result_exponent;
+
+  result_exponent = subtract(exp1, exp2);
+
+  printf("(%d/%d)^%d : (%d/%d)^%d => (%d/%d)^%d-%d = (%d/%d)^%d", a, b, exp1, a, b, exp2, a, b, exp1, exp2, a, b, result_exponent);
+}
+
+
+
+void power_of_power(int a, int b, int m, int n){
+  int result_exponent;
+
+  result_exponent = multiply(m, n);
+
+  printf("[(%d/%d)^%d]^%d => (%d/%d)^%d * %d = (%d/%d)^%d", a, b, m, n, a, b, m, n, a, b, result_exponent);
+}
+
+
+
+void fraction_from_num(int a, int b, int n){
+  int result;
+
+  result = multiply(a, n);
+
+  printf("%d/%d*%d => %d/%d = %f", a, b, n, result, b, divide(result, n));
+}
+
+
+
+float percentage(int p, int n){
+  int per;
+  per = p * n / 100;
+
+  return per;
 }
