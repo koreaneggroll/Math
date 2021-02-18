@@ -2,5 +2,5 @@
 #include "mathematics.h"
 
 int main(void){
-    printf("%f", percentage(10, 20));
+    printf("10 percent of 20 is: %f\n", percentage(10, 20));
 }

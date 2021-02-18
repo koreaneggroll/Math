@@ -101,7 +101,7 @@ double factorial(double a){
 
 
 //Converts from decimal to binary
-void decToBin(int decimal){
+void dec_to_Bin(int decimal){
     int bin[32];
     int rest, divide;
 
@@ -126,7 +126,7 @@ void decToBin(int decimal){
 
 
 //Converts from binary to decimal
-void binToDec(int bin){
+void bin_to_dec(int bin){
     int dec = 0, i = 0, rem;
     while (bin != 0) {
         rem = bin % 10;
@@ -139,7 +139,7 @@ void binToDec(int bin){
 
 
 
-void insert_Numbers(int c, int a, int b){
+void insert_whole_numbers(int c, int a, int b){
     int result;
 
     result = c * b + a;
@@ -152,7 +152,7 @@ void insert_Numbers(int c, int a, int b){
 
 
 
-void getOut_numbers(int a, int b){
+void get_out_numbers(int a, int b){
     int result, c, r;
     r = Remainder(a, b);
     c = divide(a, b);
@@ -186,7 +186,7 @@ void divide_fractions(int a, int b, int c, int d){
 
 
 
-void multiply_fractions_sameBase(int a, int b, int exp1, int exp2){
+void multiply_fractions_same_base(int a, int b, int exp1, int exp2){
     int result_exponent;
 
     result_exponent = add(exp1, exp2);
@@ -197,7 +197,7 @@ void multiply_fractions_sameBase(int a, int b, int exp1, int exp2){
 
 
 
-void divide_fractions_sameBase(int a, int b, int exp1, int exp2){
+void divide_fractions_same_base(int a, int b, int exp1, int exp2){
   int result_exponent;
 
   result_exponent = subtract(exp1, exp2);
