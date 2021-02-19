@@ -1,5 +1,6 @@
 #include "mathematics.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
     Im going to try to make this only using adition
@@ -28,6 +29,12 @@ double divide(double a, double b){
 
         PULL REQUEST IF YOU HAVE AN IDEA
     */
+
+    if(b < 0){
+      printf("Can't divide by 0\n");
+      exit(1);
+    }
+
     return a / b;
 }
 
@@ -45,6 +52,12 @@ int Remainder(int a, int b){
 
 //Multiplication implemented by addition
 double multiply(double a, double b){
+
+    if(b < 0){
+      printf("Error: variable 'b' can't be negative\n");
+      exit(1);
+    }
+
     double result = 0;
 
     for(int i = 1; i <= b; i++){
@@ -91,17 +104,28 @@ double square_root(double a){
 //Recursive function
 double factorial(double a){
 
+    if(a < 0){
+      printf("Error: variable 'a' can't be negative");
+      exit(1);
+    }
+
     if(a == 0){
         return 1;
     }
 
-    return multiply(a, factorial(subtract(n, 1)));
+    return multiply(a, factorial(subtract(a, 1)));
 }
 
 
 
 //Converts from decimal to binary
-void dec_to_Bin(int decimal){
+void dec_to_bin(int decimal){
+
+  if(decimal < 0){
+    printf("Cannot perform that operation\n");
+    exit(1);
+  }
+
     int bin[32];
     int rest, divide;
 
@@ -227,7 +251,7 @@ void fraction_from_num(int a, int b, int n){
 
 
 
-float percentage(int p, int n){
+float percentage(float p, float n){
   int per;
   per = p * n / 100;
 

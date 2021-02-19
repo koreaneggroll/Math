@@ -2,5 +2,5 @@
 #include "mathematics.h"
 
 int main(void){
-    printf("%f\n", multiply(2, 5));
+    printf("%f\n", percentage(-10, 20));
 }
