@@ -252,7 +252,7 @@ void fraction_from_num(int a, int b, int n){
 
 
 float percentage(float p, float n){
-  int per;
+  float per;
   per = p * n / 100;
 
   return per;
