@@ -48,7 +48,7 @@ double multiply(double a, double b){
     double result = 0;
 
     for(int i = 1; i <= b; i++){
-        result += a;
+        result = add(result, a);
     }
 
     return result;
@@ -60,7 +60,7 @@ double power(double a, double b){
     double result = 1;
 
     for(b; b > 0; b--){
-        result = result * a;
+        result = multiply(result, a);
     }
 
     return result;
@@ -73,7 +73,7 @@ double square_root(double a){
     double sqrt, temp;
 
 
-    sqrt = a / 2;
+    sqrt = divide(a, 2);
     temp = 0;
 
     while(sqrt != temp){
@@ -95,7 +95,7 @@ double factorial(double a){
         return 1;
     }
 
-    return a * factorial(a - 1);
+    return multiply(a, factorial(subtract(n, 1)));
 }
 
 
@@ -129,9 +129,9 @@ void dec_to_Bin(int decimal){
 void bin_to_dec(int bin){
     int dec = 0, i = 0, rem;
     while (bin != 0) {
-        rem = bin % 10;
+        rem = Remainder(bin, 10);
         bin /= 10;
-        dec += rem * power(2, i);
+        dec += multiply(rem, power(2, i));
         ++i;
     }
     printf("%d\n", dec);
