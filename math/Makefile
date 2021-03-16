@@ -1,3 +1,3 @@
 make:
-	gcc main.c mathematics.c
+	gcc main.c mathematics.c -o math
 	

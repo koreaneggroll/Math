@@ -30,7 +30,7 @@ double divide(double a, double b){
         PULL REQUEST IF YOU HAVE AN IDEA
     */
 
-    if(b < 0){
+    if(b == 0){
       printf("Can't divide by 0\n");
       exit(1);
     }
@@ -41,7 +41,7 @@ double divide(double a, double b){
 
 
 //Returns the remainder of a division
-int Remainder(int a, int b){
+int rem(int a, int b){
     int result;
     result = a-(a/b*b);
 
@@ -102,7 +102,7 @@ double square_root(double a){
 
 
 //Recursive function
-double factorial(double a){
+int factorial(int a){
 
     if(a < 0){
       printf("Error: variable 'a' can't be negative");
